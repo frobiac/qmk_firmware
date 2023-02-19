@@ -1,3 +1,5 @@
+# frobiac Keymap Overview
+
 Alpha, symbol and navigation / numpad layers
 
 ``` text
@@ -22,3 +24,8 @@ Alpha, symbol and navigation / numpad layers
 
 ```
 
+# Usage
+
+To compile json keyboard definition:
+
+    qmk compile keymaps/hypernano.json

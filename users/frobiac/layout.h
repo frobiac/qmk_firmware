@@ -26,11 +26,13 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 #    define LAYOUT KEYMAP
 #endif
 
-#define LAYOUT_hypernano_4x12_wrapper(...) LAYOUT_hypernano_4x12(__VA_ARGS__)
-#define LAYOUT_blackflat_4x12_wrapper(...) LAYOUT_blackflat_4x12(__VA_ARGS__)
-#define LAYOUT_sweep_3x5_2_wrapper(...) LAYOUT_sweep_3x5_2(__VA_ARGS__)
-
 // clang-format off
+
+#define LAYOUT_hypernano_4x12_wrapper(...)  LAYOUT_hypernano_4x12(__VA_ARGS__)
+#define LAYOUT_blackflat_4x12_wrapper(...)  LAYOUT_blackflat_4x12(__VA_ARGS__)
+#define LAYOUT_sweep_3x5_2_wrapper(...)     LAYOUT_sweep_3x5_2(__VA_ARGS__)
+#define LAYOUT_crowboard_3x5_3_wrapper(...) LAYOUT_crowboard_3x5_3(__VA_ARGS__)
+
 
 // Copyright 2023 frobiac
 // SPDX-License-Identifier: GPL-2.0-or-later
@@ -254,6 +256,19 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
         { R10, R11, R12, R13, R14 }, \
         { R20, R21, R22, R23, R24 }, \
         { R30, R31                } \
+    }
+
+#define LAYOUT_crowboard_3x5_3( \
+    L00, L01, L02, L03, L04,             R00, R01, R02, R03, R04, \
+    L10, L11, L12, L13, L14,             R10, R11, R12, R13, R14, \
+    L20, L21, L22, L23, L24, _L25, _R25, R20, R21, R22, R23, R24, \
+    _3a, _3b, L32, L33, L34, _L35, _R35, R30, R31, R32, _3y, _3z \
+    ) \
+    { \
+        { L00, L01, L02, L03, L04,           R00, R01, R02, R03, R04 }, \
+        { L10, L11, L12, L13, L14,           R10, R11, R12, R13, R14 }, \
+        { L20, L21, L22, L23, L24,           R20, R21, R22, R23, R24 }, \
+        { xxx, xxx, L32, L33, L34, R30, R31, R32                     } \
     }
 
 // clang-format on

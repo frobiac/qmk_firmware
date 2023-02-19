@@ -38,6 +38,13 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 // @TODO refactor into generic AdNW layer for use in other keyboards
 // @TODO clear RHS, modifiers in mouse layer
 
+#define _FROBIAC 0
+#define _QWERTZ  1
+#define _SYMBOLS 2
+#define _NAVNUM  3
+#define _FUNC    4
+#define _MOUSE   5
+
 // Cosmetic only: To neatly fit into 7 chars
 #define _L_MOUS MO(_MOUSE)
 #define _MOUS_X LT(_MOUSE, KC_X)

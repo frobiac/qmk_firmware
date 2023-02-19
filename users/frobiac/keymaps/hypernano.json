@@ -1,0 +1,8 @@
+{
+	"keyboard": "frobiac/hypernano",
+	"keymap": "frobiac",
+	"layout": "LAYOUT_hypernano_wrappertest,
+	"layers": [
+		[ "C_42(HRM(_BASE))" ]
+	]
+}

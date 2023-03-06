@@ -17,7 +17,7 @@
 #endif
 
 // clang-format off
-#ifdef PS2_DRIVER_USART
+#if defined(PS2_DRIVER_USART) || defined(PS2_USE_USART)
 
 #    define PS2_CLOCK_PIN D5
 #    define PS2_DATA_PIN D2
